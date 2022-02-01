@@ -3,17 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   fillit.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lasalmi <lasalmi@student.hive.fi>          +#+  +:+       +#+        */
+/*   By: mbarutel <mbarutel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/20 11:40:55 by mbarutel          #+#    #+#             */
-/*   Updated: 2022/02/01 10:08:54 by lasalmi          ###   ########.fr       */
+/*   Updated: 2022/02/01 11:50:18 by mbarutel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef HEADER_H
 # define HEADER_H
 
-# include "../libft/libft.h"
+# include "libft/inc/libft.h"
 //# include <stdio.h>
 # include <fcntl.h>
 # include <unistd.h>

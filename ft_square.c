@@ -3,17 +3,20 @@
 /*                                                        :::      ::::::::   */
 /*   ft_square.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lasalmi <lasalmi@student.hive.fi>          +#+  +:+       +#+        */
+/*   By: mbarutel <mbarutel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/26 22:51:02 by lasalmi           #+#    #+#             */
-/*   Updated: 2022/01/26 22:52:49 by lasalmi          ###   ########.fr       */
+/*   Updated: 2022/02/01 12:04:41 by mbarutel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include <stdio.h>
 
 int	ft_square(int n)
 {
 	int	ret;
-
+	
+	printf("n -- %i\n", n);
 	ret = 2;
 	while ((ret * ret) < n)
 		ret++;

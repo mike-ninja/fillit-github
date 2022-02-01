@@ -6,7 +6,7 @@
 /*   By: mbarutel <mbarutel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/01 09:46:42 by lasalmi           #+#    #+#             */
-/*   Updated: 2022/02/01 11:48:23 by mbarutel         ###   ########.fr       */
+/*   Updated: 2022/02/01 12:03:23 by mbarutel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ int	main(void)
 	j = 0;
 	n = ft_square(ft_validator(fd, test));
 	i = 0;
+	printf("n - %i\n", n);
 	boardi = ft_createboard(n);
 	ft_instetri(boardi, &test[0], 0, 0);
 	while (j < n)

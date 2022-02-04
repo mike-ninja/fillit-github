@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_createboard.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mbarutel <mbarutel@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mbarutel <mbarutel@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/26 23:05:06 by lasalmi           #+#    #+#             */
-/*   Updated: 2022/02/01 11:02:58 by mbarutel         ###   ########.fr       */
+/*   Updated: 2022/02/04 11:46:47 by mbarutel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,6 +46,7 @@ t_board	*ft_createboard(int n)
 	t_board	*board;
 	int		index;
 
+	printf("ft_createboard %i\n", n);
 	index = 0;
 	board = (t_board *)malloc(sizeof(t_board));
 	if (!board)

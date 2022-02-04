@@ -1,32 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_term_del.c                                      :+:      :+:    :+:   */
+/*   ft_printboard.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mbarutel <mbarutel@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/31 12:25:50 by mbarutel          #+#    #+#             */
-/*   Updated: 2022/02/04 11:22:16 by mbarutel         ###   ########.fr       */
+/*   Created: 2022/02/04 11:16:23 by mbarutel          #+#    #+#             */
+/*   Updated: 2022/02/04 11:16:44 by mbarutel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fillit.h"
 
-void	ft_term_del(t_board *board, t_tetris *tetri)
+void    ft_printboard(t_board *boardi)
 {
-	int	i;
-	int	y;
-	int	x;
-
-	i = 2;
-	while (i >= 0)
+    int y;
+    int x;
+    
+    y = 0;
+    while (y <= (boardi->size - 1))
 	{
-		y = tetri->y[i];
-		x = tetri->x[i];
-		board->board[tetri->loc_y + y][tetri->loc_x + x] = -1;
-		i--;
-	}
-	board->board[tetri->loc_y][tetri->loc_x] = -1;
-	tetri->loc_x = -1;
-	tetri->loc_y = -1;
+        x = 0;
+		while (x <= (boardi->size - 1))
+        {
+            if (boardi->board[y][x] >= 0)
+                printf("|%c|", (boardi->board[y][x] + 65));
+            else
+                printf("|%c|", '.');
+            x++;
+        }
+            
+		printf("\n");
+        y++;
+    }
 }

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   fillit.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mbarutel <mbarutel@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mbarutel <mbarutel@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/20 11:40:55 by mbarutel          #+#    #+#             */
-/*   Updated: 2022/02/01 12:00:56 by mbarutel         ###   ########.fr       */
+/*   Updated: 2022/02/04 11:17:06 by mbarutel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 # define HEADER_H
 
 # include "libft/includes/libft.h"
-//# include <stdio.h>
+# include <stdio.h>
 # include <fcntl.h>
 # include <unistd.h>
 # include <stdlib.h>
@@ -38,4 +38,7 @@ int     ft_validator(int fd, t_tetris *tetri);
 t_board	*ft_createboard(int n);
 int	    ft_square(int n);
 int	    ft_instetri(t_board *board, t_tetris *tetri, int x, int y);
+int    ft_solver(t_board *board, t_tetris *tetri);
+void	ft_term_del(t_board *board, t_tetris *tetri);
+void    ft_printboard(t_board *boardi);
 #endif

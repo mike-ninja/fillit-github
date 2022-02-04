@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_validator.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lasalmi <lasalmi@student.hive.fi>          +#+  +:+       +#+        */
+/*   By: mbarutel <mbarutel@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/19 15:35:34 by mbarutel          #+#    #+#             */
-/*   Updated: 2022/02/01 09:40:23 by lasalmi          ###   ########.fr       */
+/*   Updated: 2022/02/03 18:00:21 by mbarutel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,8 +50,8 @@ static int	ft_check_adjacent(char *buff, int i, t_tetris *tetri, int hash)
 		ret++;
 	if (hash > 0)
 	{
-		tetri->x[hash - 1] = (i % 5) - f_h;
-		tetri->y[hash - 1] = i / 5;
+		tetri->x[hash - 1] = (i % 5) - (f_h % 5);
+		tetri->y[hash - 1] = (i / 5) - (f_h / 5);
 	}
 	return (ret);
 }
@@ -93,7 +93,7 @@ int	ft_validator(int fd, t_tetris *head)
 	{
 		buff[bytes_read] = '\0';
 		ft_terminos_checker(buff, &head[i]);
-		head->i = i;
+		head[i].i = i;;
 		i++;
 		total_bytes += bytes_read;
 		bytes_read = read(fd, buff, BUFF_SIZE);
